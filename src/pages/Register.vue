@@ -1,6 +1,7 @@
 <template>
   <div>
-    <router-view></router-view>
+    <hm-header>注册</hm-header>
+    <hm-button>注册</hm-button>
   </div>
 </template>
 <script>
