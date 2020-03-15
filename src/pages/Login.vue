@@ -35,6 +35,10 @@ export default {
       password: ""
     };
   },
+  created() {
+    this.username = this.$route.params.username;
+    this.password = this.$route.params.password;
+  },
   methods: {
     click() {
       const count1 = this.$refs.username.validata(this.username);
@@ -50,7 +54,7 @@ export default {
           password: this.password
         }
       }).then(res => {
-        console.log(res.data);
+        // console.log(res.data);
         if (res.data.statusCode == 200) {
           this.$toast.success("登录成功");
           this.$router.push("/user");
