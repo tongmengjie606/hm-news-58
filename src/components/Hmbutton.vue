@@ -1,15 +1,19 @@
 <template>
-  <div class="button">
-   <slot></slot>
+  <div class="button" @click="login">
+    <slot></slot>
   </div>
 </template>
 <script>
 export default {
-  
-}
+  methods: {
+    login() {
+      this.$emit("click");
+    }
+  }
+};
 </script>
 <style lang="less" scoped>
-.button{
+.button {
   margin: 20px;
   background-color: red;
   text-align: center;
